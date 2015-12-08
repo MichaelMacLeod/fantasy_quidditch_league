@@ -1,0 +1,14 @@
+<% @teams.each do |team| %> 
+<%= team.name %> was founded in <%= team.founded %>. 
+<%= link_to("Show #{team.name}", team_path(team)) %>
+<%= button_to('Delete Team', team_path(team), method: :delete, data: {confirm: 'Delete them? Are you sure?!'}) %>
+<%= link_to('Edit Team', edit_team_path(team)) %>
+<br>
+<% end %> 
+
+<!-- Some bits above aren't tagged with = signs, as we don't want to display to page. But we do want to show the stuff in between.  -->
+
+<!-- This section loops through all the teams, then shows them on the http://localhost:3000/teams TEAMS page. -->
+
+
+
